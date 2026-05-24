@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <Link to="/dashboard" className="navbar-logo" onClick={closeMenu}>
-           <img src="/logo.png" alt="StemX" style={{height:'40px', borderRadius:'4px'}} />
+           <span style={{fontSize:'28px', fontWeight:'900', color:'#1B2A4A', background:'#B3CFE5', borderRadius:'6px', padding:'2px 10px',
           <div>
             <span className="logo-text">StemXuz</span>
             <span className="logo-sub">Aspiring scholars</span>
