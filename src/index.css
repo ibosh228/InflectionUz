@@ -2,21 +2,21 @@
 :root {
   --bg-primary: #0F1B35;
   --bg-secondary: #1B2A4A;
-  --bg-card: #1B2A4A;
-  --bg-card-hover: #243558;
+  --bg-card: #F5F0E8;
+  --bg-card-hover: #EDE8E0;
   --accent-primary: #1B2A4A;
   --accent-blue: #2A4A8A;
   --accent-cyan: #3A6ABF;
   --text-primary: #F5F0E8;
   --text-secondary: #C8BFB0;
-  --text-muted: #9A8F82;
-  --text-on-card: #F5F0E8;
-  --text-muted-card: #A8B8D8;
+  --text-muted: #8A9BB8;
+  --text-on-card: #1B2A4A;
+  --text-muted-card: #5A6A8A;
   --border: rgba(245, 240, 232, 0.12);
   --border-hover: rgba(245, 240, 232, 0.28);
   --success: #2E7D52;
   --error: #C62828;
-  --gold: #B8860B;
+  --gold: #C9A84C;
   --silver: #708090;
   --bronze: #8B5A2B;
 }
@@ -45,29 +45,29 @@ h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; }
   transition: all 0.2s;
 }
 .btn-primary {
-  background: var(--bg-card);
+  background: var(--bg-secondary);
   color: #F5F0E8;
-  border: 2px solid transparent;
+  border: 2px solid rgba(245, 240, 232, 0.2);
 }
-.btn-primary:hover { background: var(--bg-card-hover); transform: translateY(-1px); }
+.btn-primary:hover { background: #243558; transform: translateY(-1px); }
 .btn-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 2px solid var(--border-hover);
+  border: 2px solid rgba(245, 240, 232, 0.25);
 }
-.btn-outline:hover { background: rgba(27, 42, 74, 0.06); }
+.btn-outline:hover { background: rgba(245, 240, 232, 0.08); }
 .card {
   background: var(--bg-card);
-  border: 1px solid rgba(27, 42, 74, 0.2);
+  border: 1px solid rgba(245, 240, 232, 0.15);
   border-radius: 16px;
   padding: 24px;
   transition: all 0.2s;
   color: var(--text-on-card);
 }
-.card:hover { border-color: rgba(27, 42, 74, 0.4); transform: translateY(-2px); }
+.card:hover { transform: translateY(-2px); }
 input, textarea {
-  background: #fff;
-  border: 1.5px solid var(--border);
+  background: rgba(245, 240, 232, 0.08);
+  border: 1.5px solid rgba(245, 240, 232, 0.15);
   border-radius: 10px;
   color: var(--text-primary);
   padding: 12px 16px;
@@ -78,7 +78,7 @@ input, textarea {
 }
 input:focus, textarea:focus {
   outline: none;
-  border-color: var(--accent-blue);
+  border-color: rgba(245, 240, 232, 0.4);
 }
 input::placeholder { color: var(--text-muted); }
 .badge {
