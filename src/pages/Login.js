@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './Auth.css'
-
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -10,7 +9,6 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const { login } = useAuth()
   const navigate = useNavigate()
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
@@ -20,13 +18,12 @@ export default function Login() {
     else navigate('/dashboard')
     setLoading(false)
   }
-
   return (
     <div className="auth-page">
       <div className="auth-bg" />
       <div className="auth-card">
         <div className="auth-logo">
-          <span>📊</span>
+          <span style={{display:'inline-flex',alignItems:'center',justifyContent:'center',width:'36px',height:'36px',background:'linear-gradient(135deg,#1a6fd4,#0a3d8f)',borderRadius:'8px',marginRight:'8px',fontSize:'20px',fontWeight:'900',color:'white',letterSpacing:'-1px'}}>X</span>
           <div>
             <p className="auth-logo-title">StemXuz</p>
             <p className="auth-logo-sub">Aspiring scholars</p>
@@ -34,7 +31,6 @@ export default function Login() {
         </div>
         <h2 className="auth-title">Xush kelibsiz!</h2>
         <p className="auth-desc">Hisobingizga kiring</p>
-
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label>Email</label>
@@ -58,10 +54,9 @@ export default function Login() {
           </div>
           {error && <p className="auth-error">⚠️ {error}</p>}
           <button type="submit" className="btn btn-primary auth-btn" disabled={loading}>
-            {loading ? 'Kirилmoqda...' : 'Kirish'}
+            {loading ? 'Kirilmoqda...' : 'Kirish'}
           </button>
         </form>
-
         <p className="auth-switch">
           Hisob yo'qmi? <Link to="/register">Ro'yxatdan o'ting</Link>
         </p>
