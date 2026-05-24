@@ -15,11 +15,12 @@ export default function Navbar() {
   }
 
   const isActive = (path) => location.pathname === path
+  const closeMenu = () => setMenuOpen(false)
 
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <Link to="/dashboard" className="navbar-logo">
+        <Link to="/dashboard" className="navbar-logo" onClick={closeMenu}>
           <span className="logo-icon">📊</span>
           <div>
             <span className="logo-text">StemXuz</span>
@@ -28,21 +29,27 @@ export default function Navbar() {
         </Link>
 
         <div className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-          <Link to="/iqtisodiyot" className={`nav-link ${isActive('/iqtisodiyot') ? 'active' : ''}`}>
+          <Link to="/iqtisodiyot" className={`nav-link ${isActive('/iqtisodiyot') ? 'active' : ''}`} onClick={closeMenu}>
             💼 Iqtisodiyot
           </Link>
-          <Link to="/moliya" className={`nav-link ${isActive('/moliya') ? 'active' : ''}`}>
+          <Link to="/moliya" className={`nav-link ${isActive('/moliya') ? 'active' : ''}`} onClick={closeMenu}>
             📈 Moliya
           </Link>
-          <Link to="/tibbiyot" className={`nav-link ${isActive('/tibbiyot') ? 'active' : ''}`}>
+          <Link to="/tibbiyot" className={`nav-link ${isActive('/tibbiyot') ? 'active' : ''}`} onClick={closeMenu}>
             🩺 Tibbiyot
           </Link>
-          <Link to="/yangiliklar" className={`nav-link ${isActive('/yangiliklar') ? 'active' : ''}`}>
+          <Link to="/yangiliklar" className={`nav-link ${isActive('/yangiliklar') ? 'active' : ''}`} onClick={closeMenu}>
             📰 Yangiliklar
           </Link>
+          <Link to="/liderlar" className={`nav-link ${isActive('/liderlar') ? 'active' : ''}`} onClick={closeMenu}>
+            🏆 Liderlar
+          </Link>
+          <button onClick={() => { handleLogout(); closeMenu() }} className="nav-link logout-mobile">
+            ⇠ Chiqish
+          </button>
         </div>
 
-        <div className="navbar-right">
+        <div className="navbar-right desktop-only">
           <Link to="/liderlar" className="score-badge">
             🏅 {profile?.total_score || 0} BALL
           </Link>
@@ -52,7 +59,18 @@ export default function Navbar() {
           <button onClick={handleLogout} className="logout-btn" title="Chiqish">⇠</button>
         </div>
 
-        <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+        <div className="navbar-right-mobile">
+          <Link to="/liderlar" className="score-badge">
+            🏅 {profile?.total_score || 0} BALL
+          </Link>
+          <Link to="/profil" className="avatar">
+            {profile?.full_name?.charAt(0).toUpperCase() || 'U'}
+          </Link>
+        </div>
+
+        <button className="burger" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? '✕' : '☰'}
+        </button>
       </div>
     </nav>
   )
