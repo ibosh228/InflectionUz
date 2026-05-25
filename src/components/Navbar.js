@@ -39,20 +39,14 @@ export default function Navbar() {
           <Link to="/liderlar" className={`nav-link ${isActive('/liderlar') ? 'active' : ''}`} onClick={closeMenu}>
             🏆 Liderlar
           </Link>
+          <Link to="/profil" className={`nav-link ${isActive('/profil') ? 'active' : ''}`} onClick={closeMenu}>
+            👤 Profil
+          </Link>
           <button onClick={() => { handleLogout(); closeMenu() }} className="nav-link logout-mobile">
-            ⇠ Chiqish
+            🚪 Chiqish
           </button>
         </div>
         <div className="navbar-right desktop-only">
-          <Link to="/liderlar" className="score-badge">
-            🏅 {profile?.total_score || 0} BALL
-          </Link>
-          <Link to="/profil" className="avatar">
-            {profile?.full_name?.charAt(0).toUpperCase() || 'U'}
-          </Link>
-          <button onClick={handleLogout} className="logout-btn" title="Chiqish">⇠</button>
-        </div>
-        <div className="navbar-right-mobile">
           <Link to="/liderlar" className="score-badge">
             🏅 {profile?.total_score || 0} BALL
           </Link>
