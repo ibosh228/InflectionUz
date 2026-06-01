@@ -117,3 +117,7 @@
   font-size: 13px;
 }
 .p-loading { color: #8A9BB8; padding: 20px 0; }
+.admin-form select option {
+  background: #fff;
+  color: #1B2A4A;
+}
