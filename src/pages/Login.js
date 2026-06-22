@@ -25,7 +25,7 @@ export default function Login() {
         <div className="auth-logo">
           <img src="/logo.png" alt="StemX" style={{height:'48px',marginRight:'10px'}} />
           <div>
-            <p className="auth-logo-title">StemXuz</p>
+            <p className="auth-logo-title">InflectionUz</p>
             <p className="auth-logo-sub">Aspiring scholars</p>
           </div>
         </div>

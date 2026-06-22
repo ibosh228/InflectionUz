@@ -18,7 +18,7 @@ export default function Dashboard() {
         <div className="hero-section">
           <div className="hero-left">
             <div className="hero-badge">
-              <span className="badge-dot" /> STEMXUZ TIZIMI
+              <span className="badge-dot" /> INFLECTIONUZ TIZIMI
             </div>
             <h1 className="hero-title">
               Xush kelibsiz,<br />

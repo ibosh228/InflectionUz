@@ -36,7 +36,7 @@ export default function Register() {
         <div className="auth-logo">
           <span>📊</span>
           <div>
-            <p className="auth-logo-title">StemXuz</p>
+            <p className="auth-logo-title">InflectionUz</p>
             <p className="auth-logo-sub">Aspiring scholars</p>
           </div>
         </div>

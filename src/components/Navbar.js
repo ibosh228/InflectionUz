@@ -19,7 +19,7 @@ export default function Navbar() {
         <Link to="/dashboard" className="navbar-logo" onClick={closeMenu}>
           <img src="/logo.png" alt="StemX" style={{height:'40px',marginRight:'8px'}} />
           <div>
-            <span className="logo-text">StemXuz</span>
+            <span className="logo-text">InflectionUz</span>
             <span className="logo-sub">Aspiring scholars</span>
           </div>
         </Link>
